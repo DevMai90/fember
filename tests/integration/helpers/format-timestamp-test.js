@@ -12,6 +12,7 @@ module('Integration | Helper | format-timestamp', function(hooks) {
 
     await render(hbs`{{format-timestamp myDate}}`);
 
+    // this.element is the hbs wrapper element.
     assert.equal(this.element.textContent.trim(), 'Jan 1, 2021 00:00.00 AM');
   });
 });
