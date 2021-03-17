@@ -7,7 +7,14 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('teams');
+  // teams*
+  this.route('teams', function() {
+    // teams/(LinkedIn)*
+    this.route('team', { path: ':teamId' }, function() {
+      // teams/(LinkedIn)/(channel)*
+      this.route('channel', { path: ':channelId' });
+    });
+  });
   this.route('login');
 });
 
