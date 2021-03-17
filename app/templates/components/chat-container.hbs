@@ -1,0 +1,8 @@
+{{!-- did-insert is similar to componentDidMount --}}
+<main class="flex-1 flex flex-col bg-white overflow-hidden channel"
+  {{did-insert this.loadMessages}}
+  {{did-update this.loadMessages @channel}}
+>
+  {{!-- This makes it usable wherever chat-container is used --}}
+  {{yield this.messages}}
+</main>
